@@ -28,7 +28,7 @@ app.post('/form', (req, res) => {
     // message to myself
     nodemailer('onedibecharles19@gmail.com', `this User Contacted You ${email}, ${name}, ${message}`)
     res.status(200).json({
-      message: process.env.user
+      message: process.env.password
     })
   } catch (error) {
     res.json({
