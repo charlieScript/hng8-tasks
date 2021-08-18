@@ -23,12 +23,15 @@ app.get('/', (req, res) => {
 
 // mongoose
 mongoose
-  .connect(process.env.db, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-  })
+  .connect(
+    'mongodb+srv://charles:chigozie1999@cluster0.65y34.mongodb.net/portforlio?retryWrites=true&w=majority',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+    },
+  )
   .then(() => {
     app.listen(PORT);
     console.log('server is started at', PORT);
