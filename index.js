@@ -26,7 +26,7 @@ app.post('/form', (req, res) => {
     const { email, name, message } = req.body
     nodemailer(email, 'Thanks for contacting Me')
     // message to myself
-    nodemailer('onedibecharles19@gmail.com', `${email}, ${name}, ${message}`)
+    nodemailer('onedibecharles19@gmail.com', `this User Contacted You ${email}, ${name}, ${message}`)
     res.status(200).json({
       message: 'sent'
     })
